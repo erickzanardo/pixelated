@@ -15,9 +15,47 @@
   box-shadow: 4px 4px 0px 0px @border-color;
 }
 
+.underlined() {
+  border-bottom: 4px solid @border-color;
+}
+
 .pixel-button {
   background-color: @background-color;
   padding: 10px;
   cursor: pointer;
   .bordered();
+}
+
+.panel-behavior() {
+  background-color: @background-color;
+  padding: 10px;
+  .bordered();
+  .h1, h2, h3, h4, h5, h6 {
+    padding-bottom: 5px;
+    .underlined()
+  }
+  .pixel-panel-body {
+    font-size: 11px;
+  }
+}
+
+.pixel-panel {
+  .panel-behavior();
+}
+
+.pixel-modal {
+  display: none;
+  position: fixed;
+  width: 600px;
+  top: 120px;
+  z-index: 1;
+  .panel-behavior();
+  .pixel-modal-x {
+    .pixel-button;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 10px;
+    padding: 8px;
+  }
 }
