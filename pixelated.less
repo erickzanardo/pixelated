@@ -1,0 +1,23 @@
+@border-color: #000;
+@background-color: #fff;
+
+@font-face {
+  font-family: "8bitwonder";
+  src: url("8BITWONDER.TTF") format("truetype");
+}
+
+* {
+  font-family: "8bitwonder";
+}
+
+.bordered() {
+  border: 4px solid @border-color;
+  box-shadow: 4px 4px 0px 0px @border-color;
+}
+
+.pixel-button {
+  background-color: @background-color;
+  padding: 10px;
+  cursor: pointer;
+  .bordered();
+}
